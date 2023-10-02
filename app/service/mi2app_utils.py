@@ -38,7 +38,6 @@ def run_shell_cmd(cmd, wait=False):
     if isinstance(cmd, str):
         cmd = cmd.encode()
     p = sp.Popen(
-        "su",
         executable=ANDROID_SHELL,
         shell=True,
         stdin=sp.PIPE,
