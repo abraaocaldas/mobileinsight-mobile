@@ -58,7 +58,7 @@ def is_rooted():
         "/data/local/"]
 
     for path in su_binary_path:
-        if os.path.exists(path + "su"):
+        if os.path.exists(path):
             return True
 
     return False
@@ -66,7 +66,6 @@ def is_rooted():
 
 def run_shell_cmd(cmd, wait=False):
     p = subprocess.Popen(
-        "su",
         executable=ANDROID_SHELL,
         shell=True,
         stdin=subprocess.PIPE,
